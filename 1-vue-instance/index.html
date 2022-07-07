@@ -7,10 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="app">
+    <h3>{{ title }}</h3>
+    <span>{{ content }}</span>
+    <br>
+    <button
+            v-on:click="changeTitle('from botton')"
+    >Change Title</button>
 
+    <div
+            @click="changeTitle('from box')"
+            @mousemove="updateCoordinates($event,'box')"
+            class="box"
+    ></div>
+
+    <span>Mouse Coordinates: {{ coordinates.x }},{{ coordinates.y }}</span>
 </div>
 <script src="app.js"></script>
 </body>

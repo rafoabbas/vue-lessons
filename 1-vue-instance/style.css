@@ -1,0 +1,9 @@
+.box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #666;
+    background: beige;
+
+}
