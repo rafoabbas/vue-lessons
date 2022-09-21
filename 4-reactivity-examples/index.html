@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count App</title>
+    <script
+            src="https://unpkg.com/vue@3"
+    ></script>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+    >
+</head>
+<body>
+<div id="app" class="container mt-2">
+    <div class="row">
+        <div class="col-10 offset-2  card">
+
+<!--            <input @keydown.enter="searchList" type="text" class="form-control mb-1" v-model="search">-->
+            <input
+                    type="text"
+                    class="form-control mb-1"
+                    v-model="search"
+            >
+
+<!--            <button class="btn btn-success" @click="searchList">Ara</button>-->
+            <pre class="mt-1">
+                {{ itemlist }}
+            </pre>
+
+            <pre class="mt-1">
+                {{ filteredList }}
+            </pre>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
