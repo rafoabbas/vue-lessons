@@ -1,3 +1,4 @@
+
 const app = Vue.createApp({
     data() {
         return {
@@ -27,6 +28,15 @@ const app = Vue.createApp({
             console.log("getCountResult");
             return this.count > 5 ? 'Boyuk' : 'Kicik';
         },
+    },
+
+    //watch istediyimiz deyiskeni izleyib yeni ve kohne valuleri bizim ucun cixarir
+    watch: {
+        count(newValue, oldValue) {
+            console.log(oldValue, "=>", newValue)
+        },
+        getCountResult(newValue, oldValue) {
+            console.log(oldValue, "=>", newValue)
+        }
     }
 }).mount('#app')
-
